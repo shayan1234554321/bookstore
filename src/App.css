@@ -1,0 +1,206 @@
+/* eslint-disable */
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:wght@400;600:@700&display=swap');
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #979797;
+  border-radius: 5px;
+}
+
+:root {
+  --font-family-main: 'Poppins', sans-serif;
+  --blue: rgb(55, 142, 255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-weight: 400;
+}
+
+body {
+  padding: 5vw;
+  background-color: rgb(238, 238, 238);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+nav {
+  width: calc(100% - 80px);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: white;
+}
+
+nav .left {
+  display: flex;
+  align-items: center;
+}
+
+nav h1 {
+  color: var(--blue);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  column-gap: 40px;
+  padding-left: 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+nav li a {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+nav .selected {
+  opacity: 1;
+}
+
+.right .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.103);
+  border-radius: 50%;
+}
+
+.container {
+  width: calc(100% - 60px);
+  padding: 30px;
+  background-color: rgb(255, 245, 247);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories button {
+  background-color: var(--blue);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.3s ease-in-out;
+}
+
+.books form button {
+  padding: 10px 15px;
+  color: white;
+  background-color: var(--blue);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.books ul li button {
+  border: none;
+  font-size: 18px;
+  background-color: white;
+  opacity: 0.5;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.categories button:hover {
+  background-color: white;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.books {
+  flex-direction: column;
+}
+
+.books > h2 {
+  opacity: 0.5;
+}
+
+.books ul {
+  list-style: none;
+  row-gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.books ul li {
+  background-color: white;
+  width: calc(100% - 60px);
+  padding: 30px;
+}
+
+.books ul li h4 {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.books form h2 {
+  font-size: 25px;
+  font-weight: 600;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.books ul li h2 {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.books form {
+  padding-top: 30px;
+  border-top: 2px solid rgba(0, 0, 0, 0.146);
+  width: 100%;
+}
+
+.books form > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.books form input {
+  margin-right: 20px;
+  padding: 10px 15px;
+  width: 30%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.books form input::placeholder {
+  opacity: 0.7;
+}
