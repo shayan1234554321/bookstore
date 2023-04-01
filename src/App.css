@@ -1,18 +1,6 @@
 /* eslint-disable */
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:wght@400;600:@700&display=swap');
 
-:root {
-  --font-family-main: 'Poppins', sans-serif;
-  --blue: rgb(55, 142, 255);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-family-main);
-  font-weight: 400;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -26,6 +14,18 @@
 ::-webkit-scrollbar-thumb {
   background: #979797;
   border-radius: 5px;
+}
+
+:root {
+  --font-family-main: 'Poppins', sans-serif;
+  --blue: rgb(55, 142, 255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-weight: 400;
 }
 
 body {
@@ -110,6 +110,26 @@ nav .selected {
   transition: 0.3s ease-in-out;
 }
 
+.books form button {
+  padding: 10px 15px;
+  color: white;
+  background-color: var(--blue);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.books ul li button {
+  border: none;
+  font-size: 18px;
+  background-color: white;
+  opacity: 0.5;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
 .categories button:hover {
   background-color: white;
   border: 2px solid var(--blue);
@@ -148,19 +168,16 @@ nav .selected {
   margin-bottom: 10px;
 }
 
+.books form h2 {
+  font-size: 25px;
+  font-weight: 600;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
 .books ul li h2 {
   font-weight: 600;
   text-transform: capitalize;
-}
-
-.books ul li button {
-  border: none;
-  font-size: 18px;
-  background-color: white;
-  opacity: 0.5;
-  margin-top: 30px;
-  cursor: pointer;
-  transition: 0.1s ease-in-out;
 }
 
 .books form {
@@ -175,29 +192,12 @@ nav .selected {
   align-items: center;
 }
 
-.books form h2 {
-  font-size: 25px;
-  font-weight: 600;
-  opacity: 0.5;
-  margin-bottom: 20px;
-}
-
 .books form input {
   margin-right: 20px;
   padding: 10px 15px;
   width: 30%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 18px;
-  border-radius: 5px;
-}
-
-.books form button {
-  padding: 10px 15px;
-  color: white;
-  background-color: var(--blue);
-  font-weight: 600;
-  font-size: 16px;
-  border: none;
   border-radius: 5px;
 }
 
