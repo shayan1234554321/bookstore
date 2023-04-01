@@ -27,7 +27,10 @@
 
 # 📖 [Bookstore] <a name="about-project"></a>
 
-> This website has a calculator to use. It's user-friendly and easy to use, with a simple interface that allows you to input numerical values and select the desired operation.
+### BookStore is a website for managing books and lets the user:
+- Display a list of Books
+- Add a Book
+- Remove a selected Book
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -60,8 +63,9 @@
 
 - [ ] SPA Website
 - [ ] React app
-- [ ] Calculator
-- [ ] Quote from famous speakers
+- [ ] Display a list of Books
+- [ ] Add a Book
+- [ ] Remove a selected Book
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,7 +141,7 @@ npx stylelint "**/*.{css,scss}"
 ```
 
 ```
-npx eslint .
+npx eslint "**/*.{js,jsx}"
 ```
 
 ### Deployment
@@ -166,9 +170,10 @@ npm run deploy
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Change Navigation]**
-- [ ] **[Add Mobile version]**
-- [ ] **[Work on styling]**
+- [ ] **[Add states with Redux.]**
+- [ ] **[Complete the functionality.]**
+- [ ] **[Add tests]**
+- [ ] **[Deploy the page]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
