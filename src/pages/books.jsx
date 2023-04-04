@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import HookBook from '../hooks/book';
+import { useDispatch, useSelector } from 'react-redux';
+import { addBook, removeBook } from '../redux/books/booksSlice';
 
 export default function Books() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-
-  const { books, addBook, removeBook } = HookBook();
+  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
 
   const handleForm = (e) => {
     e.preventDefault();
-    addBook(title, author);
+    dispatch(addBook({ title, author, category: 'Action' }));
     setTitle('');
     setAuthor('');
   };
@@ -18,15 +19,15 @@ export default function Books() {
     <div className="container books">
       { (books.length === 0) && <h2>No Books Added</h2> }
       <ul>
-        {books.map((element, index) => (
-          <li key={`book-$${element.title}`}>
+        {books.map((book) => (
+          <li key={book.item_id}>
             <h4>
               Author:
-              { element.author }
+              { book.author }
             </h4>
-            <h2>{ element.title }</h2>
+            <h2>{ book.title }</h2>
             <div className="buttons">
-              <button type="button" onClick={() => removeBook(index)}>Remove</button>
+              <button type="button" onClick={() => dispatch(removeBook(book.item_id))}>Remove</button>
             </div>
           </li>
         ))}

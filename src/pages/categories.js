@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkStatus } from '../redux/categories/categoriesSlice';
 
 export default function Categories() {
-  const [status, setStatus] = useState(false);
-  const checkStatus = () => {
-    setStatus(true);
-    setTimeout(() => {
-      setStatus(false);
-    }, [2000]);
+  const status = useSelector((state) => state.categories.status);
+  const dispatch = useDispatch();
+
+  const checkState = () => {
+    dispatch(checkStatus);
   };
 
   return (
     <div className="container categories">
-      <button type="button" onClick={checkStatus}>
-        {status ? 'Checking' : 'Check Status'}
+      {status}
+      {' '}
+      <br />
+      <button type="button" onClick={checkState}>
+        Check Status
       </button>
     </div>
   );
