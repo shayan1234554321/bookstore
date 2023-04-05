@@ -170,7 +170,6 @@ npm run deploy
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add states with Redux.]**
 - [ ] **[Complete the functionality.]**
 - [ ] **[Add tests]**
 - [ ] **[Deploy the page]**
