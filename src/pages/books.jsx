@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook, removeBook } from '../redux/books/booksSlice';
+import { addBook, getAllBooks, removeBook } from '../redux/books/booksSlice';
 
 export default function Books() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const books = useSelector((state) => state.books.books);
+  const { books, loading, loadingName } = useSelector((state) => state.books);
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllBooks());
+  }, []);
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -17,17 +20,17 @@ export default function Books() {
 
   return (
     <div className="container books">
-      { (books.length === 0) && <h2>No Books Added</h2> }
+      { Object.keys(books).length === 0 && <h2>No Books Added</h2> }
       <ul>
-        {books.map((book) => (
-          <li key={book.item_id}>
+        {books && Object.keys(books).map((key) => (
+          <li key={books[key]}>
             <h4>
               Author:
-              { book.author }
+              { books[key][0].author }
             </h4>
-            <h2>{ book.title }</h2>
+            <h2>{ books[key][0].title }</h2>
             <div className="buttons">
-              <button type="button" onClick={() => dispatch(removeBook(book.item_id))}>Remove</button>
+              <button type="button" onClick={() => dispatch(removeBook(key))}>Remove</button>
             </div>
           </li>
         ))}
@@ -37,7 +40,7 @@ export default function Books() {
         <div>
           <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Book Title" />
           <input value={author} onChange={(e) => setAuthor(e.target.value)} type="text" placeholder="Book Author" />
-          <button type="submit">ADD BOOK</button>
+          <button type="submit" disabled={loading}>{loading ? loadingName : 'ADD BOOK'}</button>
         </div>
       </form>
     </div>
