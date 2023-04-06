@@ -1,5 +1,5 @@
-/* eslint-disable */
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:wght@400;600:@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -17,8 +17,9 @@
 }
 
 :root {
-  --font-family-main: 'Poppins', sans-serif;
-  --blue: rgb(55, 142, 255);
+  --font-family-main: 'Montserrat', sans-serif;
+  --font-family-secondary: 'Roboto Slab', serif;
+  --blue: #0290ff;
 }
 
 * {
@@ -30,7 +31,7 @@
 
 body {
   padding: 5vw;
-  background-color: rgb(238, 238, 238);
+  background-color: #f5f6fa;
 }
 
 button:hover {
@@ -67,11 +68,12 @@ nav ul {
   list-style: none;
   column-gap: 40px;
   padding-left: 40px;
-  font-size: 14px;
+  font-size: 0.813rem;
   letter-spacing: 1px;
 }
 
 nav li a {
+  color: #121212;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -93,7 +95,8 @@ nav .selected {
 .container {
   width: calc(100% - 60px);
   padding: 30px;
-  background-color: rgb(245, 245, 245);
+  background-color: #fafafa;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,8 +140,7 @@ nav .selected {
   border: none;
   font-size: 14px;
   background-color: white;
-  color: rgb(0, 64, 184);
-  opacity: 0.5;
+  color: #4386bf;
   margin-top: 20px;
   cursor: pointer;
   transition: 0.1s ease-in-out;
@@ -177,7 +179,7 @@ nav .selected {
   height: 120px;
 }
 
-.progressContiner h4 {
+.progressContainer h4 {
   opacity: 0.3;
 }
 
@@ -186,33 +188,37 @@ nav .selected {
 }
 
 .books ul li h4 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   margin: 5px 0;
 }
 
 .books ul li h4:nth-last-child(4) {
+  font-size: 0.875rem;
+  color: #121212;
+  font-weight: bold;
   opacity: 0.5;
-  font-weight: 800;
 }
 
 .books ul li h4:nth-last-child(2) {
-  color: rgb(0, 64, 184);
+  font-family: var(--font-family-secondary);
+  color: #4386bf;
   margin-top: 0;
-  opacity: 0.5;
   font-weight: 400;
 }
 
 .books form h2 {
-  font-size: 25px;
-  font-weight: 600;
-  opacity: 0.5;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #888;
   margin-bottom: 20px;
 }
 
 .books ul li h2 {
   font-weight: 600;
   text-transform: capitalize;
+  font-size: 1.375rem;
+  color: #121212;
 }
 
 .books form {
@@ -251,7 +257,7 @@ nav .selected {
   height: 100%;
 }
 
-.progressContiner {
+.progressContainer {
   display: flex;
   align-items: center;
   margin-right: 60px;

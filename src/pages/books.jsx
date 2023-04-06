@@ -28,7 +28,7 @@ export default function Books() {
         {books && Object.keys(books).map((key) => (
           <li key={books[key]}>
             <div className="right">
-              <div className="progressContiner">
+              <div className="progressContainer">
                 <div className="circularProgressContainer">
                   <CircularProgressbar
                     strokeWidth={6}
@@ -55,7 +55,7 @@ export default function Books() {
               { books[key][0].category }
             </h4>
             <h2>{ books[key][0].title }</h2>
-            <h4>
+            <h4 className="secondaryFont">
               { books[key][0].author }
             </h4>
             <div className="buttons">
